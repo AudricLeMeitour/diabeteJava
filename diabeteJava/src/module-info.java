@@ -6,5 +6,5 @@
  *
  */
 module diabeteJava {
-	oui
+
 }
