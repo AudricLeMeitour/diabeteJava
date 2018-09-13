@@ -133,7 +133,7 @@ public class Critere {
 	public int tourdt(String reponse) {
 		//if (Individu.getSexe() == Homme)
 			
-			
+"			alors la c'est push"
 			
 			
 	}
