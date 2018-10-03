@@ -1,8 +1,10 @@
 package org.junit;
 
+import diabeteJava.Critere;
+
 public class Test {
-	public void TestCalculer() throws Exception {
-		assertEquals(2,Test.calculer(1,1));
+	public void testAge() throws Exception {
+		assertEquals(2,Main.critereIndividu.AgeIndividu("<45"));
 
 		}
 }

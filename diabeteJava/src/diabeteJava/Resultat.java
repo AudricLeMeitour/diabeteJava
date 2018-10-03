@@ -20,14 +20,21 @@ public class Resultat {
 		Resultat = resultat;
 	}
 	
-	public int ResultAge(String Age) {
+	public int ResultAge() {
 		if (Critere.getAge() == "R1")
-			this.Resultat = 0;
+			Resultat = 0;
 		if (Critere.getAge() == "R2")
-			this.Resultat = 2;
+			Resultat = 2;
 		
 	}
-
 	
+	public int ResultatTDT() {
+		if (Critere.getTourDT() == "R1")
+			Resultat = 0;
+		if (Critere.getTourDT() == "R2")
+			Resultat = 3;
+		if (Critere.getTourDT() == "R3")
+			Resultat = 4;
+	}
 
 }
