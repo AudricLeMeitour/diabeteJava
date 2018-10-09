@@ -133,7 +133,7 @@ public class Critere {
 
 	public String Tourdt(String reponse) {
 		
-		if (Sexe() == 'Homme')
+		if (Sexe == "Homme") {
 			String R1 = "<94";
 			String R2 = "94-102";
 			String R3 = ">102";
@@ -153,7 +153,8 @@ public class Critere {
 			}
 			System.out.println(TourDT);
 			return TourDT;	
-			else 
+			}
+			else { 
 				String R1 = "<80";
 				String R2 = "80-88";
 				String R3 = ">88";
@@ -173,6 +174,8 @@ public class Critere {
 				}
 				System.out.println(TourDT);
 				return TourDT;	
+			}
+		
 	}
 	
 	public String ActivitePhy(String reponse){

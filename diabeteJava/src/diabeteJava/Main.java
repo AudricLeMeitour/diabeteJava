@@ -2,7 +2,7 @@ package diabeteJava;
 
 
 public class Main {
-	 public static void main(String[] args) {
+	 public void main(String[] args) {
 		 System.out.println("Quel est votre nom ?");
 		 String reponseNom = "";
 		 
@@ -52,8 +52,19 @@ public class Main {
 		 critereIndividu.IMC(reponseIMC);
 		 critereIndividu.PartLegume(reponseLegumeVert);
 		 
-
+		 Resultat R = new Resultat();
+		 R.ResultAge(reponseAge);
+		 R.ResultatTDT(reponseTDT);
+		 R.ResultatActivitePhy(reponseActPhy);
+		 R.ResultatATCDAntiHTA(reponseATCDAntiHTA);
+		 R.ResultatATCDDiabete(reponseATCDDiabete);
+		 R.ResultatATCDGlycePlus(reponseATCDGlycemie);
+		 R.ResultatIMC(reponseIMC);
+		 R.ResultatPartLegume(reponseLegumeVert);
 		 
+		 
+	 
 	 }
 	 
 }
+
