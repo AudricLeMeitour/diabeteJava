@@ -22,7 +22,7 @@ public class Main {
 		 while (i == 0) {
 			 String input = reader.next();
 			 if (input.compareTo("H") == 0 ) {
-			 	reponseSexe = "H";
+			 	reponseSexe = "Homme";
 			 	i = 1;
 			 }
 				 else if (input.compareTo("F") == 0){
@@ -47,11 +47,11 @@ public class Main {
 		 while (i == 0) {
 			 String input = reader.next();
 			 if (input.compareTo("O") == 0 ) {
-				 reponseActPhy = "O";
+				 reponseActPhy = "Oui";
 			 	i = 1;
 			 }
 				 else if (input.compareTo("N") == 0){
-					 reponseActPhy = "N";
+					 reponseActPhy = "Non";
 					 i = 1;
 				 } else {
 					 System.out.println("Veuillez entrer une réponse valide");
@@ -65,11 +65,11 @@ public class Main {
 		 while (i == 0) {
 			 String input = reader.next();
 			 if (input.compareTo("O") == 0 ) {
-				 reponseATCDAntiHTA = "O";
+				 reponseATCDAntiHTA = "Oui";
 			 	i = 1;
 			 }
 				 else if (input.compareTo("N") == 0){
-					 reponseATCDAntiHTA = "N";
+					 reponseATCDAntiHTA = "Non";
 					 i = 1;
 				 } else {
 					 System.out.println("Veuillez entrer une réponse valide");
@@ -83,11 +83,11 @@ public class Main {
 		 while (i == 0) {
 			 String input = reader.next();
 			 if (input.compareTo("O") == 0 ) {
-				 reponseATCDDiabete = "O";
+				 reponseATCDDiabete = "Oui";
 			 	i = 1;
 			 }
 				 else if (input.compareTo("N") == 0){
-					 reponseATCDDiabete = "N";
+					 reponseATCDDiabete = "Non";
 					 i = 1;
 				 } else {
 					 System.out.println("Veuillez entrer une réponse valide");
@@ -101,11 +101,11 @@ public class Main {
 		 while (i == 0) {
 			 String input = reader.next();
 			 if (input.compareTo("O") == 0 ) {
-				 reponseATCDGlycemie = "O";
+				 reponseATCDGlycemie = "Oui";
 			 	i = 1;
 			 }
 				 else if (input.compareTo("N") == 0){
-					 reponseATCDGlycemie = "N";
+					 reponseATCDGlycemie = "Non";
 					 i = 1;
 				 } else {
 					 System.out.println("Veuillez entrer une réponse valide");
@@ -122,15 +122,18 @@ public class Main {
 		 while (i == 0) {
 			 String input = reader.next();
 			 if (input.compareTo("O") == 0 ) {
-				 reponseLegumeVert = "O";
+				 reponseLegumeVert = "Oui";
 			 	i = 1;
 			 }
 				 else if (input.compareTo("N") == 0){
-					 reponseLegumeVert = "N";
+					 reponseLegumeVert = "Non";
 					 i = 1;
-				 } else {
-					 System.out.println("Veuillez entrer une réponse valide");
-				 	}
+					 } else if(input.compareTo("N") == 0){
+							 reponseLegumeVert = "Non";
+							 i = 1;
+						 } else {
+						 System.out.println("Veuillez entrer une réponse valide");
+					 	}
 		 }
 		  
 		 reader.close();
@@ -146,19 +149,11 @@ public class Main {
 		 critereIndividu.IMC(reponseIMC);
 		 critereIndividu.PartLegume(reponseLegumeVert);
 		 
-		 Resultat R = new Resultat(0, 0, 0, 0, 0, 0, 0, 0, 0);
-		 R.ResultAge(reponseAge);
-		 R.ResultatTDT(reponseTDT);
-		 R.ResultatActivitePhy(reponseActPhy);
-		 R.ResultatATCDAntiHTA(reponseATCDAntiHTA);
-		 R.ResultatATCDDiabete(reponseATCDDiabete);
-		 R.ResultatATCDGlycePlus(reponseATCDGlycemie);
-		 R.ResultatIMC(reponseIMC);
-		 R.ResultatPartLegume(reponseLegumeVert);
-		 
-		 
+		 Resultat R = new Resultat (reponseAge, reponseTDT, reponseActPhy, reponseATCDAntiHTA, reponseATCDDiabete, reponseATCDGlycemie,reponseIMC, reponseLegumeVert);
+		 R.Somme(reponseAge, reponseTDT, reponseActPhy, reponseATCDAntiHTA, reponseATCDDiabete, reponseATCDGlycemie, reponseIMC, reponseLegumeVert);
+
 	 
 	 }
-	 
 }
+	 
 

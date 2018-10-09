@@ -3,33 +3,33 @@ import diabeteJava.Main;
 
 public class Resultat {
 	
-	private int Somme;
-	private int ResultatAge;
-	private int ResultatActivitePhy;
-	private int ResultatATCDAntiHTA;
-	private int ResultatATCDDiabete;
-	private int ResultatATCDGlycePlus;
-	private int ResultatIMC;
-	private int ResultatPartLegume;
-	private int ResultatTDT;
+	private String ReponseAge;
+	private String ReponseActivitePhy;
+	private String ReponseATCDAntiHTA;
+	private String ReponseATCDDiabete;
+	private String ReponseATCDGlycePlus;
+	private String ReponseIMC;
+	private String ReponsePartLegume;
+	private String ReponseTDT;
 	
 	
-	public Resultat(int somme, int resultatAge, int resultatActivitePhy, int resultatATCDAntiHTA,
-			int resultatATCDDiabete, int resultatATCDGlycePlus, int resultatIMC, int resultatPartLegume,
-			int resultatTDT) {
+	public Resultat(String reponseAge, String reponseActivitePhy, String reponseATCDAntiHTA,
+			String reponseATCDDiabete, String reponseATCDGlycePlus, String reponseIMC, String reponsePartLegume,
+			String reponseTDT) {
 		super();
-		Somme = somme;
-		ResultatAge = resultatAge;
-		ResultatActivitePhy = resultatActivitePhy;
-		ResultatATCDAntiHTA = resultatATCDAntiHTA;
-		ResultatATCDDiabete = resultatATCDDiabete;
-		ResultatATCDGlycePlus = resultatATCDGlycePlus;
-		ResultatIMC = resultatIMC;
-		ResultatPartLegume = resultatPartLegume;
-		ResultatTDT = resultatTDT;
+
+		ReponseAge = reponseAge;
+		ReponseActivitePhy = reponseActivitePhy;
+		ReponseATCDAntiHTA = reponseATCDAntiHTA;
+		ReponseATCDDiabete = reponseATCDDiabete;
+		ReponseATCDGlycePlus = reponseATCDGlycePlus;
+		ReponseIMC = reponseIMC;
+		ReponsePartLegume = reponsePartLegume;
+		ReponseTDT = reponseTDT;
 	}
 
 	public int ResultAge(String reponseAge) {
+		int ResultatAge = 0;
 		if (reponseAge == "R1")
 			ResultatAge = 0;
 		if (reponseAge == "R2")
@@ -42,6 +42,7 @@ public class Resultat {
 	}
 	
 	public int ResultatTDT(String reponseTDT) {
+		int ResultatTDT = 0;
 		if (reponseTDT == "R1")
 			ResultatTDT = 0;
 		if (reponseTDT == "R2")
@@ -51,6 +52,7 @@ public class Resultat {
 		return ResultatTDT;
 	}
 	public int ResultatActivitePhy(String reponseActPhy) {
+		int ResultatActivitePhy = 0;
 		if (reponseActPhy == "R1")
 			ResultatActivitePhy = 0;
 		if (reponseActPhy == "R2")
@@ -59,6 +61,7 @@ public class Resultat {
 	}
 	
 	public int ResultatATCDAntiHTA (String reponseATCDAntiHTA) {
+		int ResultatATCDAntiHTA = 0;
 		if (reponseATCDAntiHTA == "R1")
 			ResultatATCDAntiHTA = 0;
 		if (reponseATCDAntiHTA == "R2")
@@ -67,6 +70,7 @@ public class Resultat {
 	}
 	
 	public int ResultatATCDDiabete (String reponseATCDDiabete) {
+		int ResultatATCDDiabete = 0;
 		if (reponseATCDDiabete == "R1")
 			ResultatATCDDiabete = 0;
 		if (reponseATCDDiabete == "R2")
@@ -74,6 +78,7 @@ public class Resultat {
 		return ResultatATCDDiabete;
 	}
 	public int ResultatATCDGlycePlus (String reponseATCDGlycemie) {
+		int ResultatATCDGlycePlus = 0;
 		if (reponseATCDGlycemie == "R1")
 			ResultatATCDGlycePlus = 0;
 		if (reponseATCDGlycemie == "R2")
@@ -81,6 +86,7 @@ public class Resultat {
 		return ResultatATCDGlycePlus;
 	}
 	public int ResultatIMC(String reponseIMC) {
+		int ResultatIMC = 0;
 		if (reponseIMC == "R1")
 			ResultatIMC = 0;
 		if (reponseIMC == "R2")
@@ -90,6 +96,7 @@ public class Resultat {
 		return ResultatIMC;
 	}
 	public int ResultatPartLegume (String reponseLegumeVert) {
+		int ResultatPartLegume = 0;
 		if (reponseLegumeVert == "R1")
 			ResultatPartLegume = 2;
 		if (reponseLegumeVert == "R2")
@@ -98,4 +105,13 @@ public class Resultat {
 			ResultatPartLegume = 1;
 		return ResultatPartLegume;
 	}
+	
+	public int Somme (String reponseAge,String reponseTDT,String reponseActPhy, String reponseATCDAntiHTA, String reponseATCDDiabete,String reponseATCDGlycemie,String reponseIMC,String reponseLegumeVert) {
+		int somme = 0;
+		somme = ResultAge(reponseAge)+ ResultatTDT(reponseTDT)+ ResultatActivitePhy(reponseActPhy)+ ResultatATCDAntiHTA(reponseATCDAntiHTA)+ ResultatATCDDiabete(reponseATCDDiabete)+ ResultatATCDGlycePlus(reponseATCDGlycemie)+ ResultatIMC(reponseIMC)+ ResultatPartLegume(reponseLegumeVert); 
+		System.out.println(somme);
+		return somme;
+	}
+	
+	
 }
