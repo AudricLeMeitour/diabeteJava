@@ -11,7 +11,7 @@
 	"ATCDFamDiabete" : "Non",
 	"ATCDGlycePlusNorm" : "Non",
 	"IMC" : "25-30",
-	"PartLegumeVert" : "Non",
+	"PartLegumeVert" : "Non"
 }
 
 {
@@ -19,5 +19,13 @@
 	"prenom" : "Audric",
 	"date" : "22/09/1998",
 	"secu" : "1 98 85 49 987 111 00",
-
+	"sexe" : "Homme",
+	"Age" : "<45",
+	"TourDT" : "94-102",
+	"ActPhy" : "Non",
+	"ATCDTraitAntiHTA" : "Non",
+	"ATCDFamDiabete" : "Non",
+	"ATCDGlycePlusNorm" : "Non",
+	"IMC" : "25-30",
+	"PartLegumeVert" : "Non"
 }
