@@ -30,79 +30,91 @@ public class Resultat {
 
 	public int ResultAge(String reponseAge) {
 		int ResultatAge = 0;
-		if (reponseAge == "R1")
+		if (reponseAge == "<45")
 			ResultatAge = 0;
-		if (reponseAge == "R2")
+		if (reponseAge == "45-54")
 			ResultatAge = 2;
-		if (reponseAge == "R3")
+		if (reponseAge == "55-64")
 			ResultatAge = 3;
-		if (reponseAge == "R4")
+		if (reponseAge == ">64")
 			ResultatAge = 4;
 		return ResultatAge;
 	}
 	
 	public int ResultatTDT(String reponseTDT) {
 		int ResultatTDT = 0;
-		if (reponseTDT == "R1")
-			ResultatTDT = 0;
-		if (reponseTDT == "R2")
-			ResultatTDT = 3;
-		if (reponseTDT == "R3")
-			ResultatTDT = 4;
+		if (Individu.getSexe() == "Homme") {
+			if (reponseTDT == "<94")
+				ResultatTDT = 0;
+			if (reponseTDT == "94-102")
+				ResultatTDT = 3;
+			if (reponseTDT == ">102")
+				ResultatTDT = 4;
+		}
+		else {
+			if (reponseTDT == "<80")
+				ResultatTDT = 0;
+			if (reponseTDT == "80-88")
+				ResultatTDT = 3;
+			if (reponseTDT == ">88")
+				ResultatTDT = 4;
+		}
+		
 		return ResultatTDT;
 	}
 	public int ResultatActivitePhy(String reponseActPhy) {
 		int ResultatActivitePhy = 0;
-		if (reponseActPhy == "R1")
+		if (reponseActPhy == "Oui")
 			ResultatActivitePhy = 0;
-		if (reponseActPhy == "R2")
+		if (reponseActPhy == "Non")
 			ResultatActivitePhy = 2;
 		return ResultatActivitePhy;
 	}
 	
 	public int ResultatATCDAntiHTA (String reponseATCDAntiHTA) {
 		int ResultatATCDAntiHTA = 0;
-		if (reponseATCDAntiHTA == "R1")
+		if (reponseATCDAntiHTA == "Non")
 			ResultatATCDAntiHTA = 0;
-		if (reponseATCDAntiHTA == "R2")
+		if (reponseATCDAntiHTA == "Oui")
 			ResultatATCDAntiHTA = 2;
 		return ResultatATCDAntiHTA;
 	}
 	
 	public int ResultatATCDDiabete (String reponseATCDDiabete) {
 		int ResultatATCDDiabete = 0;
-		if (reponseATCDDiabete == "R1")
+		if (reponseATCDDiabete == "Non")
 			ResultatATCDDiabete = 0;
-		if (reponseATCDDiabete == "R2")
+		if (reponseATCDDiabete == "Oui")
 			ResultatATCDDiabete = 3;
 		return ResultatATCDDiabete;
 	}
 	public int ResultatATCDGlycePlus (String reponseATCDGlycemie) {
 		int ResultatATCDGlycePlus = 0;
-		if (reponseATCDGlycemie == "R1")
+		if (reponseATCDGlycemie == "Non")
 			ResultatATCDGlycePlus = 0;
-		if (reponseATCDGlycemie == "R2")
+		if (reponseATCDGlycemie == "Oui")
 			ResultatATCDGlycePlus = 5;
 		return ResultatATCDGlycePlus;
 	}
 	public int ResultatIMC(String reponseIMC) {
 		int ResultatIMC = 0;
-		if (reponseIMC == "R1")
+		if (reponseIMC == "<25")
 			ResultatIMC = 0;
-		if (reponseIMC == "R2")
+		if (reponseIMC == "25-30")
 			ResultatIMC = 1;
-		if (reponseIMC == "R3")
+		if (reponseIMC == ">30")
 			ResultatIMC = 3;
 		return ResultatIMC;
 	}
 	public int ResultatPartLegume (String reponseLegumeVert) {
 		int ResultatPartLegume = 0;
-		if (reponseLegumeVert == "R1")
+		if (reponseLegumeVert == "Non")
 			ResultatPartLegume = 2;
-		if (reponseLegumeVert == "R2")
+		if (reponseLegumeVert == "Tous les jours")
 			ResultatPartLegume = 0;
-		if (reponseLegumeVert == "R3")
+		if (reponseLegumeVert == "Pas tous les jours")
 			ResultatPartLegume = 1;
+		System.out.println(ResultatPartLegume);
 		return ResultatPartLegume;
 	}
 	
@@ -112,6 +124,6 @@ public class Resultat {
 		System.out.println(somme);
 		return somme;
 	}
-	
+	 
 	
 }

@@ -4,21 +4,20 @@ public class Individu {
 	
 	private String Nom;
 	private String Prenom;
-	private String DateNaissance;
 	private String NumSecu;
-	private String Sexe;
+	private static String Sexe;
 	
 	
-	public Individu(String nom, String prenom, String dateNaissance, String numSecu, String sexe) {
+	public Individu(String nom, String prenom, String numSecu, String sexe) {
 		Nom = nom;
 		Prenom = prenom;
-		DateNaissance = dateNaissance;
+
 		NumSecu = numSecu;
 		Sexe = sexe;
 	}
 
 
-	public String getSexe() {
+	public static String getSexe() {
 		return Sexe;
 	}
 
